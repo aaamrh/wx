@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/classic/classic"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#009688",
+    "navigationBarTitleText":"骑马喝酒走四方",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "default",
+    "backgroundColor": "#efefef",
+    "enablePullDownRefresh": false
+  }
+  
+}

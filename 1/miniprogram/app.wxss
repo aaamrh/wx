@@ -1,0 +1,22 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 400px;
+  background: #fafafa;
+}
+
+.container .chunk{
+  width: 100px;
+  height: 100px;
+}
+
+.color1{
+  background: orange;
+}
+.color2{
+  background: green;
+}
+.color3{
+  background: burlywood
+}
