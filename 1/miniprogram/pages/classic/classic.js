@@ -1,11 +1,13 @@
-// miniprogram/pages/classic/classic.js
+import { ClassicModel } from '../../models/classic.js'
+let classic = new ClassicModel();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    classic: null
   },
 
   /**
@@ -13,6 +15,22 @@ Page({
    */
   onLoad: function (options) {
 
+    // http.request({
+    //   url: 'classic/latest',
+    //   appkey: 'KOLDaSADSDLWWbF',
+    //   success:(res, err)=>{
+    //     console.log(res)
+    //   },
+    //   fail: (res, err)=>{
+    //   },
+    // })
+
+    classic.getLatest((res)=>{
+      console.log(res)
+      this.setData({
+        classic:res
+      })
+    })
   },
 
   /**

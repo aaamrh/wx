@@ -1,5 +1,2 @@
-<view class='container'>
-  <view class='chunk color1'>1</view>
-  <view class='chunk color2'>2</view>
-  <view class='chunk color3'>3</view>
-</view>
+<p-like like="{{classic.like_status}}" count="{{classic.fav_nums}}" ></p-like>
+<p-movie img="{{classic.image}}" content="{{classic.content}}"></p-movie>
