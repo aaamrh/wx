@@ -1,5 +1,17 @@
 import { config } from '../config'
 
+const data = {
+  "content": "人生不能像做菜，把所有的料准备好才下锅",
+  "fav_nums": 11,
+  "id": 1,
+  "image": "images/1.png",
+  "index": 7,
+  "like_status": 0,
+  "pubdate": "2018-06-22",
+  "title": "李安<<饮食男女>>",
+  "type": 100
+}
+
 export class HTTP{
   request(params){
     if(!params.method){
@@ -7,7 +19,6 @@ export class HTTP{
     }
 
     wx.request({
-
       url: config.api_base_url + params.url,
       method: params.method,
       header: {
@@ -17,6 +28,7 @@ export class HTTP{
       success:(res, err)=>{
         let code = res.statusCode.toString();
         if(code.startsWith('2')){
+          console.log('utils/http.js' + ': method: success() -- status:2**')
           params.success(res)
         }
         else{
@@ -28,14 +40,15 @@ export class HTTP{
           //   icon:'none',
           //   duration: 2000
           // })
-          params.fail(params.data)
+          console.log('utils/http.js' + ': method: success() -- status:4**')
+          params.fail(data)
         }
       },
       fail: (res, err)=>{
         // API调用失败
         params.fail(res, err)
-      }
-
+      },
+      data:data
     })
   }
 

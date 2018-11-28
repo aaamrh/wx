@@ -1,2 +1,3 @@
-<p-like like="{{classic.like_status}}" count="{{classic.fav_nums}}" ></p-like>
+<p-epsoide index="{{classic.index}}"></p-epsoide>
+<p-like bind:like="onLike" like="{{classic.like_status}}" count="{{classic.fav_nums}}" ></p-like>
 <p-movie img="{{classic.image}}" content="{{classic.content}}"></p-movie>

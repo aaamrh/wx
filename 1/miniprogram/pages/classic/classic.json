@@ -1,6 +1,7 @@
 {
   "usingComponents":{
     "p-like":"/components/like/index",
-    "p-movie":"/components/classic/movie/index"
+    "p-movie":"/components/classic/movie/index",
+    "p-epsoide":"/components/epsoide/index"
   }
 }
